@@ -6,7 +6,7 @@ Mono Repository with Bazel
 
 Install bazel with bazelisk
 
-```
+```sh
 $ curl -Lo bazelisk https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-amd64
 $ chmod u+x bazelisk
 $ sudo mv bazelisk /usr/local/bin/bazel
@@ -20,4 +20,25 @@ Build target: @@//src/main/java/com/google/devtools/build/lib/bazel:BazelServer
 Build time: Tue Jun 25 15:53:05 2024 (1719330785)
 Build timestamp: 1719330785
 Build timestamp as int: 1719330785
+```
+
+## Build and Run Projects
+
+This repository contains two projects: `python_calculator` and `python_web`.
+The `python_web` project depends on the `python_calculator` project.
+
+### Build `python_calculator` project
+
+First, ensure that `python_calculator` is built successfully:
+
+```sh
+$ bazel build //projects/python_calculator:calculator_lib
+
+$ bazel test //projects/python_calculator:calculator_test
+```
+
+### Build `python_web` project
+
+```sh
+$ bazel run //projects/python_web
 ```
