@@ -1,0 +1,24 @@
+# Mac OS X
+.DS_Store
+
+# Bazel
+bazel-*
+.bazelrc.user
+bazel-out/
+bazel-bin/
+bazel-testlogs/
+bazel-genfiles/
+.bazelignore
+.bazelversion
+
+# Build outputs
+/build
+/tmp
+
+# Python
+*.pyc
+__pycache__/
+
+# IDEs
+.idea/
+.vscode/

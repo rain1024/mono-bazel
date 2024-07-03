@@ -4,7 +4,7 @@ Mono Repository with Bazel
 
 ## Getting Started
 
-Install bazel with bazelisk
+Mono Repository with [Bazel](https://bazel.build/)
 
 ```
 $ curl -Lo bazelisk https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-amd64
@@ -21,3 +21,7 @@ Build time: Tue Jun 25 15:53:05 2024 (1719330785)
 Build timestamp: 1719330785
 Build timestamp as int: 1719330785
 ```
+
+## Build with Bazel Examples
+
+* [Python Example](https://github.com/rain1024/mono-bazel/tree/python)
