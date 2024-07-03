@@ -38,11 +38,19 @@ First, ensure that `python_calculator` is built successfully:
 ```sh
 $ bazel build //projects/python_calculator:calculator_lib
 
+INFO: Build completed successfully, 1 total action
+
 $ bazel test //projects/python_calculator:calculator_test
+
+//projects/python_calculator:calculator_test    (cached) PASSED in 0.4s
 ```
 
 ### Build `python_web` project
 
 ```sh
 $ bazel run //projects/python_web
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/projects/python_web/python_web
+ * Serving Flask app 'python_web'
+ * Running on http://127.0.0.1:5000
 ```
