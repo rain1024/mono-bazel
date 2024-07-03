@@ -22,6 +22,10 @@ Build timestamp: 1719330785
 Build timestamp as int: 1719330785
 ```
 
-## Build with Bazel Examples
+# Kotlin
 
-* [Python Example](https://github.com/rain1024/mono-bazel/tree/python)
+```
+$ bazel build //projects/kotlin_calculator:kotlin_calculator_lib
+
+$ bazel test //projects/kotlin_calculator:kotlin_calculator_test
+```
