@@ -1,10 +1,10 @@
 # Mono Bazel
 
-Mono Repository with Bazel
+Mono Repository with [Bazel](https://bazel.build/)
 
 ## Getting Started
 
-Install bazel with bazelisk
+Install **bazel** with [bazelisk](https://github.com/bazelbuild/bazelisk)
 
 ```sh
 $ curl -Lo bazelisk https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-amd64
@@ -22,7 +22,11 @@ Build timestamp: 1719330785
 Build timestamp as int: 1719330785
 ```
 
-## Build and Run Projects
+## Build and Run Python Projects
+
+To build, run, and test Python projects in Bazel, first set up [`rules_python`](https://github.com/bazelbuild/rules_python) in your `WORKSPACE` file and use `pip_install` to manage dependencies specified in `requirements.txt`. Next, define dependencies in your `BUILD` files, such as using `@pip_deps` for external packages. This approach ensures efficient dependency management and reproducible builds within a Bazel monorepo.
+
+## Examples
 
 This repository contains two projects: `python_calculator` and `python_web`.
 The `python_web` project depends on the `python_calculator` project.
