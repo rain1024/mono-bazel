@@ -13,7 +13,7 @@ class MainVerticle : AbstractVerticle() {
 
         router.get("/").handler(this::handleHello)
 
-        vertx.createHttpServer().requestHandler(router).listen(8080)
+        vertx.createHttpServer().requestHandler(router).listen(5000)
     }
 
     private fun handleHello(routingContext: RoutingContext) {
