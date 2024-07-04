@@ -25,7 +25,7 @@ Build timestamp as int: 1719330785
 # Kotlin
 
 ```
-$ bazel build //projects/kotlin_calculator:kotlin_calculator_lib
+$ bazel build //projects/kotlin_calculator:kotlin_calculator_lib 
 
 $ bazel build //projects/kotlin_calculator:kotlin_calculator_test
 $ bazel test //projects/kotlin_calculator:kotlin_calculator_test

@@ -36,12 +36,18 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
-        "org.junit.jupiter:junit-jupiter-api:5.7.0",
-        "org.junit.jupiter:junit-jupiter-engine:5.7.0",
-        "org.junit.platform:junit-platform-console-standalone:1.7.0"
+        "com.github.ajalt:clikt:2.2.0",
+        "com.google.dagger:dagger:2.25.2",
+        "com.google.dagger:dagger-compiler:2.25.2",
+        "com.google.truth:truth:1.0",
+        "javax.inject:javax.inject:1",
+        "junit:junit:4.13.2",
     ],
+    fetch_sources = True,
     repositories = [
         "https://maven.google.com",
         "https://repo1.maven.org/maven2",
+        "https://jcenter.bintray.com/",
     ],
+    strict_visibility = True,
 )
