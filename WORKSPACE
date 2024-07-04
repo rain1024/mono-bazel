@@ -36,12 +36,9 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
-        "com.github.ajalt:clikt:2.2.0",
-        "com.google.dagger:dagger:2.25.2",
-        "com.google.dagger:dagger-compiler:2.25.2",
-        "com.google.truth:truth:1.0",
-        "javax.inject:javax.inject:1",
         "junit:junit:4.13.2",
+        "io.vertx:vertx-core:4.3.3",
+        "io.vertx:vertx-web:4.3.3",
     ],
     fetch_sources = True,
     repositories = [

@@ -4,6 +4,7 @@ kt_jvm_library(
     name = "kotlin_calculator_lib",
     srcs = ["src/main/kotlin/com/example/Calculator.kt"],
     deps = [],
+    visibility = ["//visibility:public"]
 )
 
 kt_jvm_test(
@@ -12,7 +13,6 @@ kt_jvm_test(
     srcs = ["src/test/kotlin/com/example/CalculatorTest.kt"],
     deps = [
         ":kotlin_calculator_lib",
-        "@maven//:com_google_truth_truth",
         "@maven//:junit_junit",
     ]
 )
