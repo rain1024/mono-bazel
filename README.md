@@ -37,7 +37,21 @@ Build timestamp as int: 1719330785
 
 **Cutest application with Bazel**
 
-Run `cute` project
+Every project in Bazel includes a `BUILD` file that provides instructions for compiling, testing, and packaging code. In this simple project, we use a `genrule` to execute custom shell commands and generate files from specified inputs.
+
+```
+genrule(
+    name = "cute",
+    srcs = ["input.txt"],
+    outs = ["output.txt"],
+    cmd = "cat $(SRCS) > $(OUTS) && echo 'Look at you, all cute and ready to build! 💖' >> $(OUTS)"
+)
+```
+
+This rule concatenates the contents of `input.txt` into `output.txt` and appends a charming message, ensuring your build process is both efficient and adorable.
+
+To build the `cute` project, use the following Bazel command:
+
 ```sh
 $ bazel build //projects/cute
 
@@ -48,10 +62,14 @@ Target //projects/cute:cute up-to-date:
 INFO: Elapsed time: 0.066s, Critical Path: 0.00s
 INFO: 1 process: 1 internal.
 INFO: Build completed successfully, 1 total action
+```
 
+After building, you can view the content of the generated output file with:
+
+```sh
 $ cat bazel-bin/projects/cute/output.txt
 Hey Bazel! 🛠️
-Look at you, all cute and ready to build! ❤️
+Look at you, all cute and ready to build! 💖
 ```
 
 ## Build more awesome applications with Bazel
