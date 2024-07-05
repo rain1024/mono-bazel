@@ -35,62 +35,14 @@ Build timestamp: 1719330785
 Build timestamp as int: 1719330785
 ```
 
-**Creating a `Cute` application with Bazel**
-
-In this section, we’ll build a simple Bazel project named [`cute`](https://github.com/rain1024/mono-bazel/tree/main/projects/cute). Every project in Bazel includes a `BUILD` file that provides instructions for compiling, testing, and packaging code. In this project, we use a [`genrule`](https://bazel.build/reference/be/general#genrule) to execute custom shell commands and generate files from specified inputs.
+## Build and Test Java Projects
 
 ```
-genrule(
-    name = "cute",
-    srcs = ["input.txt"],
-    outs = ["output.txt"],
-    cmd = """
-        cat $(SRCS) > $(OUTS) && \
-        echo 'Look at you, all cute and ready to build! 💖' >> $(OUTS)
-    """
-)
+bazel build //projects/java_calculator:calculator
+
+bazel build //projects/java_calculator:calculator_app
+
+bazel run //projects/java_calculator:calculator_app
+
+bazel test //projects/java_calculator:calculator_test
 ```
-
-This rule concatenates the contents of `input.txt` into `output.txt` and appends a charming message, ensuring your build process is both efficient and adorable.
-
-To build the project, use the following Bazel command:
-
-```sh
-$ bazel build //projects/cute
-
-INFO: Analyzed target //projects/cute:cute (1 packages loaded, 2 targets configured).
-INFO: Found 1 target...
-Target //projects/cute:cute up-to-date:
-  bazel-bin/projects/cute/output.txt
-INFO: Elapsed time: 0.066s, Critical Path: 0.00s
-INFO: 1 process: 1 internal.
-INFO: Build completed successfully, 1 total action
-```
-
-After building, you can view the content of the generated output file with:
-
-```sh
-$ cat bazel-bin/projects/cute/output.txt
-Hey Bazel! 🛠️
-Look at you, all cute and ready to build! 💖
-```
-
-**Congratulations!** You’ve successfully built and run your first Bazel application. 🎉
-
-## Build more awesome applications with Bazel
-
-<table>
-  <tr>
-    <td align="center">
-        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/python.png" alt="Python Example" height="150"/>
-        <br/>
-        <a href="https://github.com/rain1024/mono-bazel/tree/python">Python Example</a>
-        <br/>
-    </td>
-    <td align="center">
-        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/kotlin.png" alt="Kotlin Example" height="150"/>
-            <br/>
-        <a href="https://github.com/rain1024/mono-bazel/tree/kotlin">Kotlin Example</a>
-    </td>
-  </tr>
-</table>
