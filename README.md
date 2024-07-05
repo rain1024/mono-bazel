@@ -8,13 +8,6 @@
 
 [Bazel](https://bazel.build/) is an excellent build and test tool. It is designed to handle projects of any size, supporting multiple languages and platforms. Bazel helps developers to automate the build process, ensuring high performance, reliability, and scalability.
 
-This repository is dedicated to providing useful instructions on how to use Bazel in real projects across different programming languages. It includes:
-
-- **Setup guides** for installing and configuring Bazel.
-- **Sample projects** in Kotlin, Python, Java, and Rust to demonstrate practical use cases.
-- **Best practices** for structuring Bazel projects and managing dependencies.
-- **Troubleshooting tips** to help resolve common issues encountered during the build process.
-
 ## Getting Started
 
 To quickly get started with Bazel, use [Bazelisk](https://github.com/bazelbuild/bazelisk). Bazelisk is a wrapper for Bazel that automatically downloads and installs the correct Bazel version specified in your project.
