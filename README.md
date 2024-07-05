@@ -82,6 +82,8 @@ Executed 1 out of 1 test: 1 test passes.
 
 ## Build and run `java_web` project
 
+We use [Spring Boot](https://spring.io/projects/spring-boot) to create a simple REST web service. 
+
 ```sh
 $ bazel run //projects/java_web:main_application
 
