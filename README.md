@@ -8,13 +8,6 @@
 
 [Bazel](https://bazel.build/) is an excellent build and test tool. It is designed to handle projects of any size, supporting multiple languages and platforms. Bazel helps developers to automate the build process, ensuring high performance, reliability, and scalability.
 
-This repository is dedicated to providing useful instructions on how to use Bazel in real projects across different programming languages. It includes:
-
-- **Setup guides** for installing and configuring Bazel.
-- **Sample projects** in Kotlin, Python, Java, and Rust to demonstrate practical use cases.
-- **Best practices** for structuring Bazel projects and managing dependencies.
-- **Troubleshooting tips** to help resolve common issues encountered during the build process.
-
 ## Getting Started
 
 To quickly get started with Bazel, use [Bazelisk](https://github.com/bazelbuild/bazelisk). Bazelisk is a wrapper for Bazel that automatically downloads and installs the correct Bazel version specified in your project.
@@ -35,62 +28,74 @@ Build timestamp: 1719330785
 Build timestamp as int: 1719330785
 ```
 
-**Creating a `Cute` application with Bazel**
+## Build and test `java_calculator` Project
 
-In this section, we’ll build a simple Bazel project named [`cute`](https://github.com/rain1024/mono-bazel/tree/main/projects/cute). Every project in Bazel includes a `BUILD` file that provides instructions for compiling, testing, and packaging code. In this project, we use a [`genrule`](https://bazel.build/reference/be/general#genrule) to execute custom shell commands and generate files from specified inputs.
-
-```
-genrule(
-    name = "cute",
-    srcs = ["input.txt"],
-    outs = ["output.txt"],
-    cmd = """
-        cat $(SRCS) > $(OUTS) && \
-        echo 'Look at you, all cute and ready to build! 💖' >> $(OUTS)
-    """
-)
-```
-
-This rule concatenates the contents of `input.txt` into `output.txt` and appends a charming message, ensuring your build process is both efficient and adorable.
-
-To build the project, use the following Bazel command:
+### Build `java_calculator` library
 
 ```sh
-$ bazel build //projects/cute
+bazel build //projects/java_calculator:calculator
 
-INFO: Analyzed target //projects/cute:cute (1 packages loaded, 2 targets configured).
+INFO: Analyzed target //projects/java_calculator:calculator (0 packages loaded, 0 targets configured).
 INFO: Found 1 target...
-Target //projects/cute:cute up-to-date:
-  bazel-bin/projects/cute/output.txt
-INFO: Elapsed time: 0.066s, Critical Path: 0.00s
+Target //projects/java_calculator:calculator up-to-date:
+  bazel-bin/projects/java_calculator/libcalculator.jar
+INFO: Elapsed time: 0.145s, Critical Path: 0.00s
 INFO: 1 process: 1 internal.
 INFO: Build completed successfully, 1 total action
 ```
 
-After building, you can view the content of the generated output file with:
+### Build and run `java_calculator` application
 
-```sh
-$ cat bazel-bin/projects/cute/output.txt
-Hey Bazel! 🛠️
-Look at you, all cute and ready to build! 💖
+```
+bazel run //projects/java_calculator:calculator_app
+
+INFO: Analyzed target //projects/java_calculator:calculator_app (0 packages loaded, 1 target configured).
+INFO: Found 1 target...
+Target //projects/java_calculator:calculator_app up-to-date:
+  bazel-bin/projects/java_calculator/calculator_app.jar
+  bazel-bin/projects/java_calculator/calculator_app
+INFO: Elapsed time: 0.524s, Critical Path: 0.25s
+INFO: 5 processes: 4 internal, 1 worker.
+INFO: Build completed successfully, 5 total actions
+INFO: Running command line: bazel-bin/projects/java_calculator/calculator_app
+
+Calculator App
+The result of adding 76 and 97 is: 173
 ```
 
-**Congratulations!** You’ve successfully built and run your first Bazel application. 🎉
+### Test java_calculator Project
 
-## Build more awesome applications with Bazel
+```sh
+$ bazel test //projects/java_calculator:calculator_test
 
-<table>
-  <tr>
-    <td align="center">
-        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/python.png" alt="Python Example" height="150"/>
-        <br/>
-        <a href="https://github.com/rain1024/mono-bazel/tree/python">Python Example</a>
-        <br/>
-    </td>
-    <td align="center">
-        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/kotlin.png" alt="Kotlin Example" height="150"/>
-            <br/>
-        <a href="https://github.com/rain1024/mono-bazel/tree/kotlin">Kotlin Example</a>
-    </td>
-  </tr>
-</table>
+INFO: Found 1 test target...
+Target //projects/java_calculator:calculator_test up-to-date:
+  bazel-bin/projects/java_calculator/calculator_test.jar
+  bazel-bin/projects/java_calculator/calculator_test
+INFO: Elapsed time: 27.617s, Critical Path: 6.97s
+INFO: 15 processes: 4 internal, 6 linux-sandbox, 5 worker.
+INFO: Build completed successfully, 15 total actions
+//projects/java_calculator:calculator_test                 PASSED in 0.3s
+
+Executed 1 out of 1 test: 1 test passes.
+```
+
+## Build and run `java_web` project
+
+We use [Spring Boot 2.1](https://spring.io/projects/spring-boot) to create a simple REST web service. 
+
+```sh
+$ bazel run //projects/java_web:main_application
+
+INFO: Running command line: bazel-bin/projects/java_web/main_application
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.0.RELEASE)
+ 2024-07-05 14:25:04.002  INFO 135462 --- [.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+```
+
