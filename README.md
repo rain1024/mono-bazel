@@ -37,7 +37,7 @@ Build timestamp as int: 1719330785
 
 **Cutest application with Bazel**
 
-Every project in Bazel includes a `BUILD` file that provides instructions for compiling, testing, and packaging code. In this simple project, we use a `genrule` to execute custom shell commands and generate files from specified inputs.
+Every project in Bazel includes a `BUILD` file that provides instructions for compiling, testing, and packaging code. In this simple project, we use a [`genrule`](https://bazel.build/reference/be/general#genrule) to execute custom shell commands and generate files from specified inputs.
 
 ```
 genrule(
