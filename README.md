@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/rain1024/mono-bazel/">
-    <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/GH-2/images/system-design.png">
+    <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/GH-2/images/system-design.png" height="200">
   </a>
 </p>
 
@@ -40,13 +40,13 @@ Build timestamp as int: 1719330785
 <table>
   <tr>
     <td align="center">
-        <img src="https://via.placeholder.com/150" alt="Python Example Image"/>
+        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/GH-2/images/python.png" alt="Python Example Image" height="150"/>
         <br/>
         <a href="https://github.com/rain1024/mono-bazel/tree/python">Python Example</a>
         <br/>
     </td>
     <td align="center">
-        <img src="https://via.placeholder.com/150" alt="Python Example Image"/>
+        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/GH-2/images/kotlin.png" alt="Python Example Image" height="150"/>
             <br/>
         <a href="https://github.com/rain1024/mono-bazel/tree/python">Kotlin Example</a>
     </td>
