@@ -1,10 +1,16 @@
 # Mono Bazel
 
-Mono Repository with Bazel
+<p align="center">
+  <a href="https://github.com/rain1024/mono-bazel/">
+    <img src=".images/system-design.png">
+  </a>
+</p>
+
+Mono Repository with [Bazel](https://bazel.build/)
 
 ## Getting Started
 
-Mono Repository with [Bazel](https://bazel.build/)
+Use bazelisk to quickly getting started with bazel
 
 ```
 $ curl -Lo bazelisk https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-amd64
