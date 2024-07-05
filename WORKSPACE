@@ -23,6 +23,10 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
     artifacts = [
         "junit:junit:4.13.2",
+        "org.springframework.boot:spring-boot:2.1.0.RELEASE",
+        "org.springframework.boot:spring-boot-autoconfigure:2.1.0.RELEASE",
+        "org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE",
+        "org.springframework:spring-web:5.1.6.RELEASE"
     ],
     fetch_sources = True,
     repositories = [
