@@ -35,22 +35,25 @@ Build timestamp: 1719330785
 Build timestamp as int: 1719330785
 ```
 
-**Cutest application with Bazel**
+**Creating a `Cute` application with Bazel**
 
-Every project in Bazel includes a `BUILD` file that provides instructions for compiling, testing, and packaging code. In this simple project, we use a [`genrule`](https://bazel.build/reference/be/general#genrule) to execute custom shell commands and generate files from specified inputs.
+In this section, we’ll build a simple Bazel project named [`cute`](https://github.com/rain1024/mono-bazel/tree/main/projects/cute). Every project in Bazel includes a `BUILD` file that provides instructions for compiling, testing, and packaging code. In this project, we use a [`genrule`](https://bazel.build/reference/be/general#genrule) to execute custom shell commands and generate files from specified inputs.
 
 ```
 genrule(
-  name = "cute",
-  srcs = ["input.txt"],
-  outs = ["output.txt"],
-  cmd = "cat $(SRCS) > $(OUTS) && echo 'Look at you, all cute and ready to build! 💖' >> $(OUTS)"
+    name = "cute",
+    srcs = ["input.txt"],
+    outs = ["output.txt"],
+    cmd = """
+        cat $(SRCS) > $(OUTS) && \
+        echo 'Look at you, all cute and ready to build! 💖' >> $(OUTS)
+    """
 )
 ```
 
 This rule concatenates the contents of `input.txt` into `output.txt` and appends a charming message, ensuring your build process is both efficient and adorable.
 
-To build the [`cute`](https://github.com/rain1024/mono-bazel/tree/main/projects/cute) project, use the following bazel command:
+To build the project, use the following Bazel command:
 
 ```sh
 $ bazel build //projects/cute
@@ -72,7 +75,7 @@ Hey Bazel! 🛠️
 Look at you, all cute and ready to build! 💖
 ```
 
-**Congratulations! You’ve successfully built and run your first Bazel application. 🎉**
+**Congratulations!** You’ve successfully built and run your first Bazel application. 🎉
 
 ## Build more awesome applications with Bazel
 
