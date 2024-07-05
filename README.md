@@ -35,6 +35,25 @@ Build timestamp: 1719330785
 Build timestamp as int: 1719330785
 ```
 
+**Cutest application with Bazel**
+
+Run `cute` project
+```sh
+$ bazel build //projects/cute
+
+INFO: Analyzed target //projects/cute:cute (1 packages loaded, 2 targets configured).
+INFO: Found 1 target...
+Target //projects/cute:cute up-to-date:
+  bazel-bin/projects/cute/output.txt
+INFO: Elapsed time: 0.066s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+
+$ cat bazel-bin/projects/cute/output.txt
+Hey Bazel! 🛠️
+Look at you, all cute and ready to build! ❤️
+```
+
 ## Build more awesome applications with Bazel
 
 <table>
