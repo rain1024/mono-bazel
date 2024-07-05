@@ -39,13 +39,13 @@ Build timestamp as int: 1719330785
 
 <table>
   <tr>
-    <td style="text-align: center;">
+    <td align="center">
         <img src="https://via.placeholder.com/150" alt="Python Example Image"/>
         <br/>
         <a href="https://github.com/rain1024/mono-bazel/tree/python">Python Example</a>
         <br/>
     </td>
-    <td style="text-align: center;">
+    <td align="center">
         <img src="https://via.placeholder.com/150" alt="Python Example Image"/>
             <br/>
         <a href="https://github.com/rain1024/mono-bazel/tree/python">Kotlin Example</a>
