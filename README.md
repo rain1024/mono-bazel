@@ -82,15 +82,29 @@ Look at you, all cute and ready to build! 💖
 <table>
   <tr>
     <td align="center">
-        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/python.png" alt="Python Example" height="150"/>
+        <img
+          src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/python.png"
+          alt="Python Example"
+          height="150"/>
         <br/>
         <a href="https://github.com/rain1024/mono-bazel/tree/python">Python Example</a>
         <br/>
     </td>
     <td align="center">
-        <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/kotlin.png" alt="Kotlin Example" height="150"/>
-            <br/>
+        <img
+          src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/kotlin.png"
+          alt="Kotlin Example"
+          height="150"/>
+        <br/>
         <a href="https://github.com/rain1024/mono-bazel/tree/kotlin">Kotlin Example</a>
+    </td>
+    <td align="center">
+        <img
+          src="https://raw.githubusercontent.com/rain1024/mono-bazel/main/images/java.png"
+          alt="Java Example"
+          height="150"/>
+        <br/>
+        <a href="https://github.com/rain1024/mono-bazel/tree/java">Java Example</a>
     </td>
   </tr>
 </table>
