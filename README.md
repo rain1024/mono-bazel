@@ -54,7 +54,7 @@ INFO: Build completed successfully, 12 total actions
 Executed 1 out of 1 test: 1 test passes.
 ```
 
-### Build `kotlin_web` project
+### Build and run `kotlin_web` project
 
 ```sh
 $ bazel run //projects/kotlin_web:vertx_example
