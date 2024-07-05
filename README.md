@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/rain1024/mono-bazel/">
-    <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/GH-2/images/system-design.png" height="200">
+    <img src="https://raw.githubusercontent.com/rain1024/mono-bazel/GH-2/images/system-design.png" height="300">
   </a>
 </p>
 
