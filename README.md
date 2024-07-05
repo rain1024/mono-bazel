@@ -108,3 +108,11 @@ Look at you, all cute and ready to build! 💖
     </td>
   </tr>
 </table>
+
+bazel build //projects/cpp_calculator:calculator_main
+bazel run //projects/cpp_calculator:calculator_main
+
+bazel test //projects/cpp_calculator:calculator_test
+
+bazel build //projects/cpp_web:cpp_web
+bazel run //projects/cpp_web:cpp_web
