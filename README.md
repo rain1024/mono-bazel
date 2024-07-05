@@ -50,7 +50,7 @@ genrule(
 
 This rule concatenates the contents of `input.txt` into `output.txt` and appends a charming message, ensuring your build process is both efficient and adorable.
 
-To build the `cute` project, use the following Bazel command:
+To build the [`cute`](https://github.com/rain1024/mono-bazel/tree/main/projects/cute) project, use the following bazel command:
 
 ```sh
 $ bazel build //projects/cute
@@ -71,6 +71,8 @@ $ cat bazel-bin/projects/cute/output.txt
 Hey Bazel! 🛠️
 Look at you, all cute and ready to build! 💖
 ```
+
+**Congratulations! You’ve successfully built and run your first Bazel application. 🎉**
 
 ## Build more awesome applications with Bazel
 
