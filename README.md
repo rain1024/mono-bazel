@@ -24,7 +24,7 @@ Build timestamp as int: 1719330785
 
 ## Build and Test Kotlin Projects
 
-To build Kotlin with Bazel, we use the [rules_kotlin](https://github.com/bazelbuild/rules_kotlin) rule. For installing additional packages, we use [rules_jvm_external](https://github.com/bazelbuild/rules_jvm_external) and maven_install.
+To build Kotlin with Bazel, we use the [rules_kotlin](https://github.com/bazelbuild/rules_kotlin) rule. For installing additional packages, we use [rules_jvm_external](https://github.com/bazelbuild/rules_jvm_external) and `maven_install`.
 
 ### Build and test `kotlin_calculator` Project
 
