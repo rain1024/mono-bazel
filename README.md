@@ -116,3 +116,5 @@ bazel test //projects/cpp_calculator:calculator_test
 
 bazel build //projects/cpp_web:cpp_web
 bazel run //projects/cpp_web:cpp_web
+
+bazel build //third_party/crow
